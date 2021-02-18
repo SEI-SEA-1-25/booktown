@@ -47,7 +47,7 @@ WHERE subjects = 'Computers';
 SELECT books.title, author.first_name, author.last_name, subjects.subject
 FROM books 
 JOIN authors 
-ON books.author_id = a.id
+ON books.author_id = authors.id
 JOIN subjects  
 ON books.subject_id = subjects.id;
 
