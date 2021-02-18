@@ -1,12 +1,35 @@
 -- ### Order
 -- 1. Find all subjects sorted by subject
+booktown=# SELECT subject FROM subjects;
+
 -- 2. Find all subjects sorted by location
+booktown=# SELECT subject, location FROM subjects ORDER BY location;
 
 -- ### Where
 -- 3. Find the book "Little Women"
--- 4. Find all books containing the word "Python"
--- 5. Find all subjects with the location "Main St" sort them by subject
+booktown=# SELECT title FROM books WHERE title = 'Little Women';
+    title
+--------------
+ Little Women
+(1 row)
 
+-- 4. Find all books containing the word "Python"
+booktown=# SELECT * FROM books WHERE title LIKE '%Python%';
+  id   |       title        | author_id | subject_id
+-------+--------------------+-----------+------------
+ 41473 | Programming Python |      7805 |          4
+ 41477 | Learning Python    |      7805 |          4
+(2 rows)
+
+-- 5. Find all subjects with the location "Main St" sort them by subject
+booktown=# SELECT subject FROM subjects WHERE location = 'Main St';
+     subject
+-----------------
+ Drama
+ Entertainment
+ Romance
+ Science Fiction
+(4 rows)
 
 -- ### Joins
 
