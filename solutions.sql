@@ -30,7 +30,7 @@ ORDER BY subject;
 
 -- 6. Find all books about Computers and list ONLY the book titles
 SELECT books.title
-FROM books JOIN subjects ON (books.id=subjects.id)
+FROM books JOIN subjects ON (books.subject_id=subjects.id)
 WHERE subjects.subject = 'Computers';
 
 -- 7. Find all books and display a result table with ONLY the following columns
@@ -39,8 +39,8 @@ WHERE subjects.subject = 'Computers';
 -- 	* Author's last name
 -- 	* Book subject
 SELECT books.title, authors.first_name, authors.last_name, subjects.subject
-FROM books JOIN authors ON (books.id=authors.id)
-JOIN subjects ON (authors.id=subjects.id);
+FROM books JOIN authors ON (books.author_id=authors.id)
+JOIN subjects ON (books.subject_id=subjects.id);
 
 -- 8. Find all books that are listed in the stock table
 -- 	* Sort them by retail price (most expensive first)
