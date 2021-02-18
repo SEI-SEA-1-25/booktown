@@ -34,17 +34,43 @@ Complete the following exercises to practice using SQL.
 
 ### Order
 1. Find all subjects sorted by subject
+
+SELECT subject 
+FROM subjects;
+
 2. Find all subjects sorted by location
+
+SELECT location
+FROM subjects;
 
 ### Where
 3. Find the book "Little Women"
+
+SELECT *
+FROM books
+WHERE title = 'Little Women';
+
 4. Find all books containing the word "Python"
+SELECT * 
+FROM books 
+WHERE title LIKE '%Python%';
+
 5. Find all subjects with the location "Main St" sort them by subject
+
+SELECT subject
+FROM subjects
+WHERE location = 'Main St';
 
 
 ### Joins
 
 6. Find all books about Computers and list ONLY the book titles
+SELECT title
+FROM books
+INNER JOIN 
+
+
+
 7. Find all books and display a result table with ONLY the following columns
 	* Book title
 	* Author's first name
