@@ -12,6 +12,30 @@ To get started we'll need to import the booktown.sql file.
 5. type `\list` to ensure the booktown database was successfully completed
 6. type `\c booktown` to connect to the booktown database
 7. type `\d` to see a list of all the tables in the booktown database
+                        List of relations
+	Schema |         Name          |   Type   |        Owner         
+	--------+-----------------------+----------+----------------------
+	public | alternate_stock       | table    | LouisaLathamJohnston
+	public | authors               | table    | LouisaLathamJohnston
+	public | book_backup           | table    | LouisaLathamJohnston
+	public | book_ids              | sequence | LouisaLathamJohnston
+	public | book_queue            | table    | LouisaLathamJohnston
+	public | books                 | table    | LouisaLathamJohnston
+	public | customers             | table    | LouisaLathamJohnston
+	public | daily_inventory       | table    | LouisaLathamJohnston
+	public | distinguished_authors | table    | LouisaLathamJohnston
+	public | editions              | table    | LouisaLathamJohnston
+	public | employees             | table    | LouisaLathamJohnston
+	public | favorite_authors      | table    | LouisaLathamJohnston
+	public | favorite_books        | table    | LouisaLathamJohnston
+	public | money_example         | table    | LouisaLathamJohnston
+	public | my_list               | table    | LouisaLathamJohnston
+	public | numeric_values        | table    | LouisaLathamJohnston
+	public | publishers            | table    | LouisaLathamJohnston
+	public | schedules             | table    | LouisaLathamJohnston
+	public | shipments             | table    | LouisaLathamJohnston
+	public | states                | table    | LouisaLathamJohnston
+
 8. type `\d [TABLE_NAME]` to see information about columns and their types for a specific table. You should see output like below:
 
 ```
@@ -34,17 +58,24 @@ Complete the following exercises to practice using SQL.
 
 ### Order
 1. Find all subjects sorted by subject
+	SELECT subject FROM subjects ORDER BY subject;
 2. Find all subjects sorted by location
+	SELECT subject FROM subjects ORDER BY location;
+
 
 ### Where
 3. Find the book "Little Women"
+	SELECT title FROM books WHERE title = 'Little Women';
 4. Find all books containing the word "Python"
+	SELECT title FROM books WHERE title LIKE '%Python%';
 5. Find all subjects with the location "Main St" sort them by subject
+	SELECT subject FROM subjects WHERE location = 'Main St' ORDER BY subject;
 
 
 ### Joins
 
 6. Find all books about Computers and list ONLY the book titles
+	SELECT *
 7. Find all books and display a result table with ONLY the following columns
 	* Book title
 	* Author's first name
