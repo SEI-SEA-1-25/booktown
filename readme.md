@@ -33,14 +33,26 @@ Indexes:
 Complete the following exercises to practice using SQL.
 
 ### Order
-1. Find all subjects sorted by subject
-2. Find all subjects sorted by location
+<!-- 1. Find all subjects sorted by subject -->
+
+SELECT * FROM subjects;
+
+<!-- 2. Find all subjects sorted by location -->
+
+SELECT * FROM subjects ORDER BY location;
 
 ### Where
-3. Find the book "Little Women"
-4. Find all books containing the word "Python"
-5. Find all subjects with the location "Main St" sort them by subject
+<!-- 3. Find the book "Little Women" -->
 
+WHERE title = ('Little Women');
+
+<!-- 4. Find all books containing the word "Python" -->
+
+SELECT * FROM books WHERE string = 'Python';
+
+<!-- 5. Find all subjects with the location "Main St" sort them by subject -->
+
+SELECT * FROM subjects WHERE subjects.location = 'Main St';
 
 ### Joins
 
