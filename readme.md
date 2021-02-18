@@ -35,10 +35,15 @@ Complete the following exercises to practice using SQL.
 ### Order
 1. Find all subjects sorted by subject
 
-SELECT subject 
-FROM subjects;
+SELECT *
+FROM subjects
+ORDER BY subject;
 
 2. Find all subjects sorted by location
+
+SELECT *
+FROM subjects
+ORDER BY location;
 
 SELECT location
 FROM subjects;
@@ -67,7 +72,7 @@ WHERE location = 'Main St';
 6. Find all books about Computers and list ONLY the book titles
 SELECT title
 FROM books
-INNER JOIN 
+JOIN 
 
 
 
